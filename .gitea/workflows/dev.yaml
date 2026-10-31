@@ -4,13 +4,12 @@ on:
     branches:
       - dev
 
-
 jobs:
   release:
     name: Release
     steps:
       - name: Build&Push Image
-        uses: https://${{ vars.LOCAL_REGISTRY_URL }}/${{ vars.LOCAL_REGISTRY_USERNAME }}/gitea-workflows-builder@dev
+        uses: https://${{ vars.LOCAL_REGISTRY_URL }}/${{ vars.LOCAL_REGISTRY_USERNAME }}/gitea-workflows-builder@main
         with:
           registry_url: ${{ vars.LOCAL_REGISTRY_URL }}
           registry_username: ${{ vars.LOCAL_REGISTRY_USERNAME }}
