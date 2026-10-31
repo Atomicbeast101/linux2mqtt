@@ -4,6 +4,7 @@ on:
     branches:
       - dev
 
+
 jobs:
   release:
     name: Release
