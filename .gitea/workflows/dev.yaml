@@ -4,7 +4,6 @@ on:
     branches:
       - dev
 
-
 jobs:
   release:
     name: Release
@@ -24,7 +23,7 @@ jobs:
     needs:
       - release
     env:
-      SUCCESS: ${{ needs.release.result == 'success'
+      SUCCESS: ${{ needs.release.result == 'success' }}
     steps:
       - name: Notify User
         uses: https://${{ vars.LOCAL_REGISTRY_URL }}/${{ vars.LOCAL_REGISTRY_USERNAME }}/gitea-workflows-notification@main
